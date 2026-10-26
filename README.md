@@ -108,6 +108,9 @@
     <li>Go to the official 7-Zip download page[cite: 2].</li>
     <li>Download the appropriate installer for your host operating system (e.g., 64-bit Windows x64 .exe)[cite: 2].</li>
     <li>Run the installer executable and click Install to complete the wizard in your destination folder[cite: 2].</li>
+
+    <img width="100%" height="1080" alt="2-screenshot-title-image png" src="https://github.com/user-attachments/assets/3ad22a42-02b5-4eff-8b76-c51dcf319fdb" />
+
   </ul>
 
   <!-- Step 2 (Subheading: 10px | Text/List: 9px) -->
@@ -117,6 +120,9 @@
     <li>Download the Oracle VM VirtualBox installer and Extension Pack for your host OS[cite: 3, 5].</li>
     <li>Run the installer with administrative privileges.</li>
     <li>Accept the default settings, allow the network interface installation prompts (which may briefly reset your network connection), and finish the wizard.</li>
+
+    <img width="100%" height="1080" alt="5-screenshot-title-image png" src="https://github.com/user-attachments/assets/0a44490a-e77f-4ed6-b611-fe0d9a2fe3d3" />
+
   </ul>
 
   <!-- Step 3 (Subheading: 10px | Text/List: 9px) -->
@@ -127,6 +133,9 @@
     <li>Go to the top menu and select File > Tools > Network Manager (or click Network from the top bar)[cite: 3].</li>
     <li>Switch to the NAT Networks tab and click Create[cite: 3].</li>
     <li>Configure the network properties with an IPv4 Prefix (e.g., 10.0.0.0/24) and ensure Enable DHCP is checked. Click Apply[cite: 3].</li>
+
+    <img width="100%" height="1080" alt="3-screenshot-title-image png" src="https://github.com/user-attachments/assets/5f68db21-7115-4165-8e46-ee4068092a99" />
+
   </ul>
 
   <!-- Step 4 (Subheading: 10px | Text/List: 9px) -->
@@ -137,6 +146,10 @@
     <li>Download the pre-built VirtualBox appliance (.ova or .vdi)[cite: 4, 5].</li>
     <li>Import the appliance into VirtualBox by double-clicking the file or selecting File > Import Appliance in VirtualBox Manager[cite: 5].</li>
     <li>Allocate appropriate resources (at least 2 CPU cores and 4 GB / 2048 MB+ RAM)[cite: 5].</li>
+
+
+    <img width="100%" height="1080" alt="4-screenshot-title-image png" src="https://github.com/user-attachments/assets/c60874eb-6686-4ec2-b04a-81f4c36ff5ea" />
+
   </ul>
 
   <!-- Step 5 (Subheading: 10px | Text/List: 9px) -->
@@ -148,6 +161,8 @@
     <li>Under Adapter 1, change the "Attached to" dropdown from NAT to NAT Network[cite: 3, 5].</li>
     <li>Select the NAT Network name you created earlier (NatNetwork) and click OK[cite: 3].</li>
     <li>Power on the VM, log in (default username: kali, password: kali), and open a terminal to verify the IP address using ip a[cite: 5, 6].</li>
+
+    
   </ul>
 
   <!-- Step 6 (Subheading: 10px | Text/List: 9px) -->
@@ -158,7 +173,99 @@
     <li>In VirtualBox Manager, click the menu next to the VM name or go to the Snapshots menu (hamburger/stacked icon next to Details)[cite: 5].</li>
     <li>Click Take (Take Snapshot)[cite: 5].</li>
     <li>Enter a descriptive snapshot name (e.g., Baseline-Fresh-Install) and a description detailing that the network and tools are configured[cite: 5].</li>
+
+ <img width="100%" height="509" alt="6-screenshot-title-image png - Copy" src="https://github.com/user-attachments/assets/148d643f-ebd7-48d6-9cb2-925509634cc7" />
+
+
   </ul>
+
+  <div style="font-family: Arial, sans-serif; color: #333; line-height: 1.4;">
+
+  <!-- Section 7: Lab Verifications -->
+  <h2 style="font-size: 11px; font-weight: bold; margin-top: 15px; color: #1a0dab;">
+    7. Lab Verifications
+  </h2>
+  <ul style="font-size: 9px; margin: 4px 0; padding-left: 15px;">
+    <li><strong>IP Assignment Check:</strong> Verified that the Kali VM successfully acquired a valid IP address on the local NAT network subnet (`10.0.0.x`)[cite: 3, 5].</li>
+    <li><strong>Ping Sweep Verification:</strong> Executed a host discovery scan across the subnet to identify live nodes:
+      <code style="font-size: 9px; background-color: #f4f4f4; padding: 2px 4px;">nmap -sn 10.0.0.0/24</code>
+      <br><em>Result:</em> Successfully listed active hosts within the isolated virtual environment[cite: 3].
+    </li>
+    <li><strong>Port Scan Verification:</strong> Ran a TCP SYN scan against the test target to confirm service availability[cite: 6].</li>
+  </ul>
+
+  <!-- Section 8: Problem Encountered and Solutions -->
+  <h2 style="font-size: 11px; font-weight: bold; margin-top: 15px; color: #1a0dab;">
+    8. Problem Encountered and Solutions
+  </h2>
+  <table border="1" cellpadding="6" cellspacing="0" style="border-collapse: collapse; width: 100%; font-size: 9px; margin-top: 5px;">
+    <thead>
+      <tr style="background-color: #f2f2f2; font-size: 10px;">
+        <th style="text-align: left; padding: 6px;">Problem Encountered</th>
+        <th style="text-align: left; padding: 6px;">Root Cause</th>
+        <th style="text-align: left; padding: 6px;">Solution Applied</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="padding: 6px;"><strong>No IP Address assigned to Kali VM</strong></td>
+        <td style="padding: 6px;">Default VirtualBox network attachment was not properly linked to the custom NAT network segment[cite: 3, 5].</td>
+        <td style="padding: 6px;">Switched VirtualBox adapter setting to <em>NAT Network</em> (`NatNetwork`), then restarted networking[cite: 3, 5].</td>
+      </tr>
+      <tr>
+        <td style="padding: 6px;"><strong>Nmap "Permission Denied" / Raw Sockets Error</strong></td>
+        <td style="padding: 6px;">Standard user accounts lack privileges to send raw ICMP/SYN packets.</td>
+        <td style="padding: 6px;">Pre-pended <code>sudo</code> to the Nmap command or executed the session as the root user.</td>
+      </tr>
+      <tr>
+        <td style="padding: 6px;"><strong>Host Firewall blocking ping responses</strong></td>
+        <td style="padding: 6px;">Host firewall dropping ICMP echo requests originating from the virtual segment.</td>
+        <td style="padding: 6px;">Allowed ICMP/Echo Request rules in the host firewall settings.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Section 9: What I Learned -->
+  <h2 style="font-size: 11px; font-weight: bold; margin-top: 15px; color: #1a0dab;">
+    9. What I Learned
+  </h2>
+  <ul style="font-size: 9px; margin: 4px 0; padding-left: 15px;">
+    <li><strong>Virtualization Dynamics:</strong> Gained practical proficiency in configuring hypervisor virtual networks (`NatNetwork`) and managing guest resource allocation[cite: 3, 5].</li>
+    <li><strong>Reconnaissance Fundamentals:</strong> Understood how Nmap constructs packet flags to map network topologies and discover running services[cite: 6].</li>
+    <li><strong>Troubleshooting Methodology:</strong> Developed a systematic approach to diagnosing packet routing and interface configuration issues between host hypervisors and guest virtual machines[cite: 3, 5].</li>
+  </ul>
+
+  <!-- Section 10: Security and Ethical Use -->
+  <h2 style="font-size: 11px; font-weight: bold; margin-top: 15px; color: #1a0dab;">
+    10. Security and Ethical Use
+  </h2>
+  <ul style="font-size: 9px; margin: 4px 0; padding-left: 15px;">
+    <li><strong>Scope of Engagement:</strong> All scanning and reconnaissance activities were restricted strictly to our isolated lab subnet (`10.0.0.0/24`) and authorized test targets[cite: 3].</li>
+    <li><strong>Legal Compliance:</strong> Adhered strictly to ethical hacking guidelines, ensuring no unauthorized external systems were probed or scanned without explicit permission.</li>
+  </ul>
+
+  <!-- Section 11: Tools and Resources -->
+  <h2 style="font-size: 11px; font-weight: bold; margin-top: 15px; color: #1a0dab;">
+    11. Tools and Resources
+  </h2>
+  <ul style="font-size: 9px; margin: 4px 0; padding-left: 15px;">
+    <li><strong>7-Zip:</strong> Archive utility used for handling compressed installer packages[cite: 2].</li>
+    <li><strong>Oracle VM VirtualBox:</strong> Hypervisor platform for running virtual machines[cite: 3, 5].</li>
+    <li><strong>Kali Linux:</strong> Penetration testing Linux distribution[cite: 4, 5, 6].</li>
+    <li><strong>Nmap / Zenmap:</strong> Network exploration tool and security scanner.</li>
+  </ul>
+
+  <!-- Section 12: Author -->
+  <h2 style="font-size: 11px; font-weight: bold; margin-top: 15px; color: #1a0dab;">
+    12. Author
+  </h2>
+  <p style="font-size: 9px; margin: 4px 0;">
+    <strong>Project Author:</strong> Kaveesha Heshani <br>
+    <strong>LinkedIn :</strong>  https://www.linkedin.com/in/kaveesha-heshani-7b942537b?utm_source=share_via&utm_content=profile&utm_medium=member_android  <br>
+    <strong>Course/Module:</strong> Networkwalks Cybersecurity Program – Week 1, Project Module 1 
+  </p>
+
+</div>
 
 </div>
 
