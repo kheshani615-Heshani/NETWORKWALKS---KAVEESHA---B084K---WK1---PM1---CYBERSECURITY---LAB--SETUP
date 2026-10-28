@@ -319,7 +319,7 @@
   
   <p style="font-size: 9px; margin: 4px 0;">
     <strong>Project Author:</strong> Kaveesha Heshani <br>    
-   <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/kaveesha-heshani-7b942537b" target="_blank" style="color: #1a0dab; text-decoration: underline;">https://www.linkedin.com/in/kaveesha-heshani-7b942537b</a>
+   <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/kaveesha-heshani-7b942537b" target="_blank" style="color: #1a0dab; text-decoration: underline;">https://www.linkedin.com/in/kaveesha-heshani-7b942537b</a> <br>
     <strong>Course/Module:</strong> Networkwalks Cybersecurity Program – Week 1, Project Module 1 
   </p>
 
