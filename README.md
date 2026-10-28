@@ -1,21 +1,31 @@
-<div style="font-family: Arial, sans-serif; color: #333; line-height: 1.4;">
+<div  style="font-family: Arial, sans-serif; color: #333; line-height: 1.4;">
 
   <!-- Main Topic (Font Size 12px) -->
-  <h1 style="font-size: 12px;font-color:Light Blue; font-weight: bold; border-bottom: 2px ; padding-bottom: 4px;">
-            Cybersecurity Lab Environment Setup & Initial Reconnaissance
+  <h1 style="font-size: 12px; font-color:Light Blue; font-weight: bold; border-bottom: 2px ; padding-bottom: 4px;">
+    
+  # 🔐 Cybersecurity Lab Environment Setup & Initial Reconnaissance
+
+  <img width="750" align=center height="500" alt="image" src="https://github.com/user-attachments/assets/d1f6b1e3-a8ac-4f87-88d8-d99d94456283" />
+
+  
   </h1>
+
+  
 
   <!-- Section 1: Project View (Heading: 11px | Body: 9px) -->
   <h2 style="font-size: 11px; font-weight: bold; margin-top: 15px; color: #1a0dab;">
-    1. Project View
+
+    
+   <span>📌</span> Project View
   </h2>
   <p style="font-size: 9px; margin: 4px 0;">
     This project establishes a foundational, secure, and isolated cybersecurity testing environment. It details the deployment of a virtualization hypervisor (Oracle VM VirtualBox), the provisioning of a penetration testing operating system (Kali Linux), and the configuration of essential network reconnaissance utilities.
   </p>
+  
 
   <!-- Section 2: Objectives (Heading: 11px | List: 9px) -->
   <h2 style="font-size: 11px; font-weight: bold; margin-top: 15px; color: #1a0dab;">
-    2. Objectives
+   <span>🎯</span> Objectives
   </h2>
   <ul style="font-size: 9px; margin: 4px 0; padding-left: 15px;">
     <li><strong>Infrastructure Deployment:</strong> Install and configure a hypervisor environment for running isolated virtual machines safely.</li>
@@ -25,9 +35,12 @@
     <li><strong>Documentation & Compliance:</strong> Record architectural layouts, configuration steps, troubleshooting logs, and ethical guidelines.</li>
   </ul>
 
+  
+
   <!-- Section 3: Purpose of the Lab (Heading: 11px | Body & List: 9px) -->
   <h2 style="font-size: 11px; font-weight: bold; margin-top: 15px; color: #1a0dab;">
-    3. Purpose of the Lab
+  
+  <span>🛡️<span/>Purpose of the Lab
   </h2>
   <p style="font-size: 9px; margin: 4px 0;">
     In cybersecurity, having an isolated, repeatable, and well-understood lab environment is paramount. This lab ensures that:
@@ -38,23 +51,36 @@
     <li>Standardized reporting templates are established for documenting technical lab results.</li>
   </ul>
 
+  
+
   <!-- Section 4: Lab Architecture (Heading: 11px | Text & Code: 9px) -->
   <h2 style="font-size: 11px; font-weight: bold; margin-top: 15px; color: #1a0dab;">
-    4. Lab Architecture
+    <span>🏗️ </span> Lab Architecture
   </h2>
   <p style="font-size: 9px; margin: 4px 0;">
     The lab uses a hybrid host-guest virtualization model supported by Oracle VM VirtualBox and custom NAT network configurations[cite: 3, 5]:
+
+    
   </p>
   <pre style="font-size: 9px; background-color: #f4f4f4; padding: 6px; border: 1px solid #ddd; font-family: monospace;">
 
-    <img width="1920" height="1080" alt="3-screenshot-title-image png" src="https://github.com/user-attachments/assets/78787dad-6254-4420-bba0-de7bd862638c" />
+  
+
+  <img width="1920" height="1080" alt="3-screenshot-title-image png" src="https://github.com/user-attachments/assets/78787dad-6254-4420-bba0-de7bd862638c" />
+
+
+  
 
 
   <!-- Section 5: Lab Configuration (Heading: 11px | List: 9px) -->
-  <h2 style="font-size: 11px; font-weight: bold; margin-top: 15px; color: #1a0dab;">
-    5. Lab Configuration
+
+  
+  <h2 style=font-size: 11px; font-weight: bold; align=center; margin-top: 15px; color: #1a0dab;">
+    
+  <span>⚙️</span>Lab Configuration
+    
   </h2>
-  <ul style="font-size: 9px; margin: 4px 0; padding-left: 15px;">
+  <ul style=font-size: 9px; margin: 4px 0; aligncenter;padding-left: 15px;">
     <li><strong>Hypervisor Version:</strong> Oracle VM VirtualBox 7.x[cite: 3, 5]</li>
     <li><strong>Guest OS:</strong> Kali Linux (XFCE Desktop)[cite: 5, 6]</li>
     <li><strong>Virtual Hardware Specs:</strong> 2 vCPUs, 2048 MB+ Base Memory[cite: 5]</li>
@@ -63,10 +89,13 @@
 
 </div>
 
-🐞 Problems Encountered & Solutions
+
+
+<span>🐞<span/>Problems Encountered & Solutions
 
 
 <table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; width: 100%;">
+  
   <thead>
     <tr style="background-color: #f2f2f2;">
       <th style="text-align: left; padding: 8px;">Problem Encountered</th>
@@ -94,11 +123,12 @@
 </table>
 
 
-<div style="font-family: Arial, sans-serif; color: #333; line-height: 1.4;">
+<div style="font-family: Arial, sans-serif; color:#333; line-height: 1.4;">
 
   <!-- Section Heading (Font Size 11px) -->
-  <h2 style="font-size: 11px; font-weight: bold; margin-top: 15px; color: #1a0dab;">
-    6. Lab Setup Procedure
+  <h2 style="font-size: 11px; font-weight: bold; align:center;margin-top: 15px; color: #1a0dab;">
+    
+  <span>🛠️</span>Lab Setup Procedure
   </h2>
 
   <!-- Step 1 (Subheading: 10px | Text/List: 9px) -->
@@ -109,7 +139,7 @@
     <li>Download the appropriate installer for your host operating system (e.g., 64-bit Windows x64 .exe)[cite: 2].</li>
     <li>Run the installer executable and click Install to complete the wizard in your destination folder[cite: 2].</li>
 
-    <img width="100%" height="1080" alt="2-screenshot-title-image png" src="https://github.com/user-attachments/assets/3ad22a42-02b5-4eff-8b76-c51dcf319fdb" />
+  <img width="100%" height="1080" alt="2-screenshot-title-image png" src="https://github.com/user-attachments/assets/3ad22a42-02b5-4eff-8b76-c51dcf319fdb" />
 
   </ul>
 
@@ -121,7 +151,7 @@
     <li>Run the installer with administrative privileges.</li>
     <li>Accept the default settings, allow the network interface installation prompts (which may briefly reset your network connection), and finish the wizard.</li>
 
-    <img width="100%" height="1080" alt="5-screenshot-title-image png" src="https://github.com/user-attachments/assets/0a44490a-e77f-4ed6-b611-fe0d9a2fe3d3" />
+   <img width="100%" height="1080" alt="5-screenshot-title-image png" src="https://github.com/user-attachments/assets/0a44490a-e77f-4ed6-b611-fe0d9a2fe3d3" />
 
   </ul>
 
@@ -134,7 +164,7 @@
     <li>Switch to the NAT Networks tab and click Create[cite: 3].</li>
     <li>Configure the network properties with an IPv4 Prefix (e.g., 10.0.0.0/24) and ensure Enable DHCP is checked. Click Apply[cite: 3].</li>
 
-    <img width="100%" height="1080" alt="3-screenshot-title-image png" src="https://github.com/user-attachments/assets/5f68db21-7115-4165-8e46-ee4068092a99" />
+  <img width="100%" height="1080" alt="3-screenshot-title-image png" src="https://github.com/user-attachments/assets/5f68db21-7115-4165-8e46-ee4068092a99" />
 
   </ul>
 
@@ -147,8 +177,8 @@
     <li>Import the appliance into VirtualBox by double-clicking the file or selecting File > Import Appliance in VirtualBox Manager[cite: 5].</li>
     <li>Allocate appropriate resources (at least 2 CPU cores and 4 GB / 2048 MB+ RAM)[cite: 5].</li>
 
+  <img width="1920" height="1080" alt="4-screenshot-title-image png" src="https://github.com/user-attachments/assets/9a9e2e30-db6f-426d-8aab-07080a17c22c" />
 
-    <img width="100%" height="1080" alt="4-screenshot-title-image png" src="https://github.com/user-attachments/assets/c60874eb-6686-4ec2-b04a-81f4c36ff5ea" />
 
   </ul>
 
@@ -179,11 +209,15 @@
 
   </ul>
 
+  
+
   <div style="font-family: Arial, sans-serif; color: #333; line-height: 1.4;">
 
   <!-- Section 7: Lab Verifications -->
   <h2 style="font-size: 11px; font-weight: bold; margin-top: 15px; color: #1a0dab;">
-    7. Lab Verifications
+    
+  <span>🔍<span/> Lab Verifications
+  
   </h2>
   <ul style="font-size: 9px; margin: 4px 0; padding-left: 15px;">
     <li><strong>IP Assignment Check:</strong> Verified that the Kali VM successfully acquired a valid IP address on the local NAT network subnet (`10.0.0.x`)[cite: 3, 5].</li>
@@ -196,7 +230,11 @@
 
   <!-- Section 8: Problem Encountered and Solutions -->
   <h2 style="font-size: 11px; font-weight: bold; margin-top: 15px; color: #1a0dab;">
-    8. Problem Encountered and Solutions
+  
+    
+  <span>⚠️</span>Problem Encountered and Solutions
+  
+  
   </h2>
   <table border="1" cellpadding="6" cellspacing="0" style="border-collapse: collapse; width: 100%; font-size: 9px; margin-top: 5px;">
     <thead>
@@ -225,9 +263,16 @@
     </tbody>
   </table>
 
+  
+
   <!-- Section 9: What I Learned -->
   <h2 style="font-size: 11px; font-weight: bold; margin-top: 15px; color: #1a0dab;">
-    9. What I Learned
+
+    
+  <span>💡<span/> What I Learned
+  
+
+
   </h2>
   <ul style="font-size: 9px; margin: 4px 0; padding-left: 15px;">
     <li><strong>Virtualization Dynamics:</strong> Gained practical proficiency in configuring hypervisor virtual networks (`NatNetwork`) and managing guest resource allocation[cite: 3, 5].</li>
@@ -235,10 +280,16 @@
     <li><strong>Troubleshooting Methodology:</strong> Developed a systematic approach to diagnosing packet routing and interface configuration issues between host hypervisors and guest virtual machines[cite: 3, 5].</li>
   </ul>
 
+  
+
   <!-- Section 10: Security and Ethical Use -->
   <h2 style="font-size: 11px; font-weight: bold; margin-top: 15px; color: #1a0dab;">
-    10. Security and Ethical Use
+    <span>🛡️</span></san>Security and Ethical Use
+
+    
   </h2>
+
+  
   <ul style="font-size: 9px; margin: 4px 0; padding-left: 15px;">
     <li><strong>Scope of Engagement:</strong> All scanning and reconnaissance activities were restricted strictly to our isolated lab subnet (`10.0.0.0/24`) and authorized test targets[cite: 3].</li>
     <li><strong>Legal Compliance:</strong> Adhered strictly to ethical hacking guidelines, ensuring no unauthorized external systems were probed or scanned without explicit permission.</li>
@@ -246,8 +297,10 @@
 
   <!-- Section 11: Tools and Resources -->
   <h2 style="font-size: 11px; font-weight: bold; margin-top: 15px; color: #1a0dab;">
-    11. Tools and Resources
+    
+   <span>🧰</span> Tools and Resources
   </h2>
+  
   <ul style="font-size: 9px; margin: 4px 0; padding-left: 15px;">
     <li><strong>7-Zip:</strong> Archive utility used for handling compressed installer packages[cite: 2].</li>
     <li><strong>Oracle VM VirtualBox:</strong> Hypervisor platform for running virtual machines[cite: 3, 5].</li>
@@ -255,10 +308,15 @@
     <li><strong>Nmap / Zenmap:</strong> Network exploration tool and security scanner.</li>
   </ul>
 
+  
+
   <!-- Section 12: Author -->
   <h2 style="font-size: 11px; font-weight: bold; margin-top: 15px; color: #1a0dab;">
-    12. Author
+    
+  <span>👤</span> Author
+  
   </h2>
+  
   <p style="font-size: 9px; margin: 4px 0;">
     <strong>Project Author:</strong> Kaveesha Heshani <br>
     <strong>LinkedIn :</strong>  https://www.linkedin.com/in/kaveesha-heshani-7b942537b?utm_source=share_via&utm_content=profile&utm_medium=member_android  <br>
